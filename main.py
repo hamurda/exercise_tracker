@@ -5,7 +5,7 @@ import datetime as dt
 # Nutritionix "Natural Language for Exercise" API
 APP_ID = os.environ.get("APP_ID")
 API_KEY = os.environ.get("API_KEY")
-SHEETY_ENP = "https://api.sheety.co/4d884657710d6bbd0f940e24f186a0bb/workoutTracking/workouts"
+SHEETY_ENP = os.environ.get("SHEETY_ENDP")
 EXERCISE_ENDP = "https://trackapi.nutritionix.com/v2/natural/exercise"
 SHEETY_AUTH = os.environ.get("SHEETY_AUTH")
 
