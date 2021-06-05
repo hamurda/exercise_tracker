@@ -15,8 +15,10 @@ headers = {
     "x-remote-user-id": "0",
 }
 
+entry = input("What did you do today?\n").lower()
+
 exercise_params = {
-    "query": "ran 3 miles",
+    "query": entry,
     # "gender": "female",
     # "weight_kg": 72.5,
     # "height_cm": 167.64,
@@ -53,6 +55,6 @@ get_response_sheety = requests.get(url=SHEETY_ENP, headers= sheety_headers)
 get_response_sheety.raise_for_status()
 print(get_response_sheety.json())
 
-# post_response_sheety = requests.post(url=SHEETY_ENP, json=sheety_params)
-# post_response_sheety.raise_for_status()
-# print(post_response_sheety.json())
+post_response_sheety = requests.post(url=SHEETY_ENP, json=sheety_params, headers=sheety_headers)
+post_response_sheety.raise_for_status()
+print(post_response_sheety.json())
